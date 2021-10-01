@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <vector>
 
 #include "Person.h"
 #include "Professor.h"
@@ -24,5 +25,20 @@ int main()
 	professor.Teaches();
 
 	std::cout << professor.ToString() << std::endl;
+
+	std::vector<Person*> people;
+
+	people.push_back(new Professor("Alvaro", "Quevedo", 32.0f, "AQ123456789"));
+
+	people[0]->SaysHello();
+
+	std::cout << people[0]->ToString() << std::endl;
+
+
+	people.push_back(new Student("Nick", "Smythe", 20.0f,"NS123456789"));
+
+	people[0]->SaysHello();
+
+	std::cout << people[1]->ToString() << std::endl;
 }
 
